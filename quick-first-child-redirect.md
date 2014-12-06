@@ -10,7 +10,7 @@ authors: marcus
 
 ----
 
-tags: session, template, structure
+tags: session, templates, structure
 
 ----
 
