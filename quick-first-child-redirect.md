@@ -2,7 +2,7 @@ title: Quick ProcessWire first child redirect snippet
 
 ----
 
-version: 0.0.2
+version: 0.0.3
 
 ----
 
@@ -22,7 +22,7 @@ From time to time it happens on a website project that you don't really have pag
 solution:
 Use ProcessWire API to redirect:
 
-```
+```PHP
 <?php
 /**
  * Template: First Child redirect
