@@ -2,7 +2,7 @@ title: Duplicate content from one field to another
 
 ----
 
-version: 0.0.3
+version: 0.0.4
 
 ----
 
@@ -29,9 +29,10 @@ $source = "fieldname1";
 $destination = "fieldname2";
 $template = "templatename";
 
-foreach($pages->find("template=$template") as $p){
-    $p->$destination = $p->$source;
+foreach($pages->find("template=$template") as $p) {
+    // set outputFormatting to 'false' so the plain value is copied
     $p->of(false);
+    $p->$destination = $p->$source;
     $p->save($destination);
 }
 ```
