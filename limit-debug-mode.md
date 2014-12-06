@@ -2,7 +2,7 @@ title: Limiting debug mode to  development environment
 
 ----
 
-version: 0.0.1
+version: 0.0.3
 
 ----
 
@@ -24,11 +24,10 @@ Here's a Laravel-inspired mini tutorial to prevent that - in this case utilizing
 
 #### Step 1: Set an environment variable
 
-When managing/creating your virtual host, click the "Extended" tab and fill in *Additional parameters for Virual Host*:
+When managing/creating your virtual host, click the "Extended" tab and fill in *Additional parameters for Virtual Host*:
 
-```
+```Apache
 SetEnv ENV development
-
 ```
 
 Doing this we set an environment variable called ENV to a value of "development", for example:
@@ -37,15 +36,13 @@ Doing this we set an environment variable called ENV to a value of "development"
 
 Within aforementioned virtual host...
 
-```
+```PHP
 $_ENV["ENV"]
-
 ```
 ...now returns "development". We can use this to add a small switch to ProcessWire's main debug setting:
 
-```
+```PHP
 $config->debug = ($_ENV["ENV"] == "development") ? true : false;
-
 ```
 
 This is just a concise way of saying: if $_ENV["ENV"] is "development", turn debug on (true), else leave it off (false).
