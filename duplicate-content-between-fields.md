@@ -2,7 +2,7 @@ title: Duplicate content from one field to another
 
 ----
 
-version: 0.0.2
+version: 0.0.3
 
 ----
 
@@ -23,7 +23,8 @@ solution:
 Use ProcessWire API to migrate the content so it exists in both fields, then you can remove one field from one template and the other field from the other template:
 
 ```PHP
-// this duplicates the content in fieldname1 into fieldname2 for all pages with the template called: templatename
+// this duplicates the content in fieldname1 into fieldname2 for all pages with
+// the template called: templatename
 $source = "fieldname1";
 $destination = "fieldname2";
 $template = "templatename";
