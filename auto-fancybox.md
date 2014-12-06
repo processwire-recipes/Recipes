@@ -21,14 +21,14 @@ You have got thumbnails in your body fields that link to larger versions of the 
 
 solution:
 Find all links to image files (jpg, png, gif) that originate in the particular ProcessWire installation.
-```
+```JS
 $("[href^='/site/assets/files/']").filter(function() {
     return this.href.match(/.*[jpg|png|gif]$/i);
 }).addClass('to-fancy');
 ```
 
 Init fancybox on this selection. You can supply an options object.
-```
+```JS
 $('.to-fancy').fancybox();
 ```
 
