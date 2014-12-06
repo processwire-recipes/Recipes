@@ -6,7 +6,7 @@ version: 0.0.1
 
 ----
 
-authors: @isellsoap
+authors: isellsoap
 
 ----
 
