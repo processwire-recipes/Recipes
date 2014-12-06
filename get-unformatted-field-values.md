@@ -2,7 +2,7 @@ title: Get unformatted field values
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -21,7 +21,7 @@ You need to return a field value unformatted in order to format it individually 
 
 solution:
 You can access the naked field value with the getUnformatted method like so:
-```
+```PHP
 <?php echo date("F j, Y, g:i a", $page->getUnformatted("a_date_field")); ?>
 ```
 
