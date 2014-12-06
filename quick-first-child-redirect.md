@@ -2,7 +2,7 @@ title: Quick ProcessWire first child redirect snippet
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -23,12 +23,12 @@ solution:
 Use ProcessWire API to redirect:
 
 ```
+<?php
 /**
  * Template: First Child redirect
  *
  */
 
-<?php
 if($page->numChildren) $session->redirect($page->child()->url);
 ```
 
