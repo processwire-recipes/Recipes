@@ -2,7 +2,7 @@ title: Resetting admin password via API
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -12,7 +12,7 @@ authors: Nico Knoll
 
 tags: api, users, password, emergency
 
------
+----
 
 problem: 
 For some reason, you have managed to lock yourself out of a site you are currently developing.
