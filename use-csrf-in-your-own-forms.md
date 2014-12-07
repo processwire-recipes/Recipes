@@ -2,7 +2,7 @@ title: Use CSRF in your own forms
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -12,7 +12,7 @@ authors: Harmster
 
 tags: forms, csrf, security
 
------
+----
 
 problem: 
 If you do not wish to create forms via the ProcessWire API, but still aiming to use PW's form features, you can use its CRSF (Cross-Site Request Forgery) preventing features like so:
