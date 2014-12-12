@@ -2,7 +2,7 @@ title: Maintainance Mode
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -25,7 +25,7 @@ otherwise overwrite the users changes.
 solution:
 Add this on top of your `/site/templates/admin.php`
 
-```
+```PHP
 // check if the user is logged in and if they are not a super user
 if ($user->isLoggedIn() && $config->maintainance === true && !$user->isSuperuser()) {
 	// logout the user
@@ -41,7 +41,7 @@ In your `/site/config.php` you add a config value `maintainance` an change it ba
 to `false` if you're done maintaining.
 
 
-```
+```PHP
 $config->maintainance = true;
 ```
 
