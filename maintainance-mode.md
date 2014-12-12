@@ -2,7 +2,7 @@ title: Maintainance Mode
 
 ----
 
-version: 0.0.2
+version: 0.0.3
 
 ----
 
@@ -18,7 +18,7 @@ problem:
 You are currently reworking the page/field/template/module structure of your site
 and have a local db dump of the live site on your system but you don't want the
 user to make changes in the meantime. A restore from local back to live would
-otherwise overwrite the users changes.
+otherwise overwrite the user's changes.
 
 ----
 
@@ -37,7 +37,7 @@ if ($user->isLoggedIn() && $config->maintainance === true && !$user->isSuperuser
 }
 ```
 
-In your `/site/config.php` you add a config value `maintainance` an change it back
+In your `/site/config.php` you add a config value `maintainance` and change it back
 to `false` if you're done maintaining.
 
 
