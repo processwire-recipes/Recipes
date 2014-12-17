@@ -1,4 +1,4 @@
-title: Maintainance Mode
+title: Maintenance Mode
 
 ----
 
@@ -10,7 +10,7 @@ authors: owzim
 
 ----
 
-tags: admin, maintainance, session
+tags: admin, maintenance, session
 
 ----
 
@@ -27,22 +27,22 @@ Add this on top of your `/site/templates/admin.php`
 
 ```PHP
 // check if the user is logged in and if they are not a super user
-if ($user->isLoggedIn() && $config->maintainance === true && !$user->isSuperuser()) {
+if ($user->isLoggedIn() && $config->maintenance === true && !$user->isSuperuser()) {
 	// logout the user
 	$session->logout();
 	// spit out an error message via session, so it still appears after the redirect
-	$session->error('Database currently in maintainance - logged out');
+	$session->error('Database currently in maintenance - logged out');
 	// redirect to the login page
 	$session->redirect($config->urls->admin);
 }
 ```
 
-In your `/site/config.php` you add a config value `maintainance` and change it back
+In your `/site/config.php` you add a config value `maintenance` and change it back
 to `false` if you're done maintaining.
 
 
 ```PHP
-$config->maintainance = true;
+$config->maintenance = true;
 ```
 
 ----
