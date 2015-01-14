@@ -22,14 +22,12 @@ You have a pool of pages, e.g. quotes/testimonials, and want to display a random
 solution:
 A little example how to pull a random page:
 ```PHP
-$quote = $pages->find("parent=1041, include=hidden"); // example parent
+$quote = $pages->find("template=quote, include=hidden, sort=random, limit=1")->first();
 
-if(count($quote)) {
+if($quote->id) {
 
-	$quote->shuffle();
-	$pick = $quote->getRandom();
-	$q = $pick->quote; // example field
-	$a = $pick->author; // example field
+	$q = $quote->quote; // example field
+	$a = $quote->author; // example field
 
 	echo "<div class='quoteWrapper'>\n";
 	echo "	<div class='quote'>$q</div>\n";
