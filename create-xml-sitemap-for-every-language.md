@@ -2,7 +2,7 @@ title: Create an XML sitemap for every language
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -101,4 +101,4 @@ echo $sitemapCollection;
 ----
 
 resources:
-* [Dragans ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/xmlSitemapMultilang.php)
+* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/xmlSitemapMultilang.php)

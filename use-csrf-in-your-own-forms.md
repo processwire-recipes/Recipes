@@ -2,7 +2,7 @@ title: Use CSRF in your own forms
 
 ----
 
-version: 0.0.2
+version: 0.0.3
 
 ----
 
@@ -54,6 +54,6 @@ Basicly what this does is set a session variable with a name (getTokenName) and 
 ----
 
 resources:
-* [Harmsters forum post](https://processwire.com/talk/topic/3779-use-csrf-in-your-own-forms/)
+* [Harmster's forum post](https://processwire.com/talk/topic/3779-use-csrf-in-your-own-forms/)
 * [Wikipedia on CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
 * Alternative: [Forum post: Create simple forms using api](https://processwire.com/talk/topic/2089-create-simple-forms-using-api/)

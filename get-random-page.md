@@ -2,7 +2,7 @@ title: Get random page via API, e.g. from a pool of testimonials
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -42,4 +42,4 @@ if(count($quote)) {
 ----
 
 resources:
-* [Dragans ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/randomQuote.inc)
+* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/randomQuote.inc)

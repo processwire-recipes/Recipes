@@ -2,7 +2,7 @@ title: Typical breadcrumbs example
 
 ----
 
-version: 0.0.1
+version: 0.0.2
 
 ----
 
@@ -39,4 +39,4 @@ echo "</ul>";
 ----
 
 resources:
-* [Dragans ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/breadcrumbs.inc)
+* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/breadcrumbs.inc)
