@@ -2,11 +2,11 @@ title: Get random page via API, e.g. from a pool of testimonials
 
 ----
 
-version: 0.0.3
+version: 0.0.4
 
 ----
 
-authors: dragan
+authors: dragan, apeisa
 
 ----
 
