@@ -2,7 +2,7 @@ title: Create an index/linklist of all used image tags
 
 ----
 
-version: 0.0.1
+version: 1.0.0
 
 ----
 

@@ -2,7 +2,7 @@ title: Enhance image links on your site with FancyBox
 
 ----
 
-version: 0.0.2
+version: 1.0.1
 
 ----
 

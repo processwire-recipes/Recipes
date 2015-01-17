@@ -2,7 +2,7 @@ title: Use different sets of template files, e.g. based on hostname
 
 ----
 
-version: 0.0.1
+version: 1.0.0
 
 ----
 

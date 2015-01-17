@@ -2,7 +2,7 @@ title: Resetting admin password via API
 
 ----
 
-version: 0.0.3
+version: 1.0.2
 
 ----
 

@@ -2,7 +2,7 @@ title: Field/template context
 
 ----
 
-version: 0.0.1
+version: 1.0.0
 
 ----
 

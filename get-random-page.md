@@ -2,7 +2,7 @@ title: Get random page via API, e.g. from a pool of testimonials
 
 ----
 
-version: 0.0.4
+version: 1.1.1
 
 ----
 

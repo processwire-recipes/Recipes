@@ -2,7 +2,7 @@ title: Find latest modified (sub)child of a page
 
 ----
 
-version: 0.0.2
+version: 1.0.0
 
 ----
 

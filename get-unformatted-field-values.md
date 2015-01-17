@@ -2,7 +2,7 @@ title: Get unformatted field values
 
 ----
 
-version: 0.0.2
+version: 1.0.1
 
 ----
 

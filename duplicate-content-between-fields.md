@@ -2,7 +2,7 @@ title: Duplicate content from one field to another
 
 ----
 
-version: 0.0.4
+version: 1.0.3
 
 ----
 

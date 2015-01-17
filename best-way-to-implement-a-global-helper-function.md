@@ -2,7 +2,7 @@ title: Best way to implement a global utility function
 
 ----
 
-version: 0.0.1
+version: 1.0.0
 
 ----
 

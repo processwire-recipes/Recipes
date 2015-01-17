@@ -2,7 +2,7 @@ title: Typical breadcrumbs example
 
 ----
 
-version: 0.0.2
+version: 1.0.1
 
 ----
 

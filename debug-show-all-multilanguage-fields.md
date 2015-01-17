@@ -2,7 +2,7 @@ title: Debug: Show all template field names and labels (for each language)
 
 ----
 
-version: 0.0.2
+version: 1.0.1
 
 ----
 

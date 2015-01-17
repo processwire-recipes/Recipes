@@ -2,7 +2,7 @@ title: Quick ProcessWire first child redirect snippet
 
 ----
 
-version: 0.0.4
+version: 1.0.3
 
 ----
 

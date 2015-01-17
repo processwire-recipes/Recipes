@@ -2,7 +2,7 @@ title: Limiting debug mode to  development environment
 
 ----
 
-version: 0.0.3
+version: 1.0.2
 
 ----
 

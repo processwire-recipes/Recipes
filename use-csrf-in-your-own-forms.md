@@ -2,7 +2,7 @@ title: Use CSRF in your own forms
 
 ----
 
-version: 0.0.3
+version: 1.0.2
 
 ----
 

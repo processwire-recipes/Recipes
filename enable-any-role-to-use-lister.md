@@ -2,7 +2,7 @@ title: Enable any Role to use Lister (pages/find)
 
 ----
 
-version: 0.0.1
+version: 1.0.0
 
 ----
 

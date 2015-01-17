@@ -2,7 +2,7 @@ title: Set language-specific input field labels via API
 
 ----
 
-version: 0.0.2
+version: 1.0.1
 
 ----
 
