@@ -1,4 +1,4 @@
-title: Do things, after certain pages are saved.
+title: Do things after certain pages are saved.
 
 ----
 
@@ -6,7 +6,7 @@ version: 1.0.0
 
 ----
 
-authors: dragan
+authors: lostkobrakai
 
 ----
 
@@ -20,7 +20,7 @@ You need to run any process after saving pages.
 ----
 
 solution:
-The best way to add those extra processes is via a small autoload module. This can be placed in /site/modules/HookAfterPageSave/HookAfterPageSave.module. Now you can manage and extend this as every other module as well. You can change the processes in the afterSaveReady() method, add module settings to give easy access to potential variable states. Also you can easily enable/disable this at any time. 
+The best way to add those extra process(es) is via a small autoload module. This can be placed in /site/modules/HookAfterPagesSave/HookAfterPagesSave.module. Now you can manage and extend this like every other module as well. You can change the things to be changed in the afterSaveReady() method, add module settings to give easy access to potential user manageable settings. Also you can easily enable/disable this at any time. 
 
 ```PHP
 <?php
@@ -36,7 +36,7 @@ The best way to add those extra processes is via a small autoload module. This c
  *
  */
 
-class HookAfterPageSave extends WireData implements Module {
+class HookAfterPagesSave extends WireData implements Module {
 
   public static function getModuleInfo() {
 
@@ -53,6 +53,8 @@ class HookAfterPageSave extends WireData implements Module {
     // init() is called when the module is loaded.
     // saveReady is a hook after processing the previous changes of the page,
     // but just before those changes are saved to the database.
+    // It's called for each page that's being saved, no matter if it's in
+    // the backend or in your templates via the api.
     $this->addHookAfter('Pages::saveReady', $this, 'afterSaveReady'); 
   }
 
@@ -63,7 +65,7 @@ class HookAfterPageSave extends WireData implements Module {
     // Sample condition and changes
     if($page->template == "basic-page"){
       $page->addStatus(Page::statusLocked);
-      // Page will be saved right after this hook, so no need to call ->save().
+      // Page will be saved right after this hook, so no need to call save().
       // Every other page you load and edit here needs to be saved manually.
       $this->message("Page has been locked");
     }
