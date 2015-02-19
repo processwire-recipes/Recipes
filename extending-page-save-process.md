@@ -2,7 +2,7 @@ title: Extending page save process
 
 ----
 
-version: 1.0.0
+version: 1.0.1
 
 ----
 
@@ -65,7 +65,7 @@ class HookAfterPagesSave extends WireData implements Module {
         $page = $event->arguments[0]; 
 
         // Sample condition and changes
-        if($page->template == "basic-page"){
+        if($page->template == "basic-page" && !$page->isTrash()){
             $page->addStatus(Page::statusLocked);
             // Page will be saved right after this hook, so no need to call save().
             // Every other page you load and edit here needs to be saved manually.
