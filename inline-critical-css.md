@@ -176,9 +176,9 @@ Last but not least we're loading the main.css file asynchronously using
 [loadCSS](http://martinwolf.org/2014/12/18/load-css-asynchronously-with-loadcss/) and set a cookie named "csscached" with the date string we previously defined in ``$cssupdate`` and a far future expires date to make it last in the cache for a long time.
 
 ## Ready, set, ...
-Finally type ``grunt`` and Press <Enter> (it feels right to press a little harder than normal) in your command line, lean back and watch the magic happen.  
+Finally type ``grunt`` and Press ``<Enter>`` (it feels right to press a little harder than normal) in your command line, lean back and watch the magic happen.  
 
-![Go](https://i.imgur.com/YG7Pp7t.gif)
+![Go](http://i.imgur.com/fBiNqXW.gif)
 
 
 ## Further optimization and optimizing
