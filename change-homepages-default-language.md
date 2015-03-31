@@ -1,8 +1,8 @@
-title: Change hompage's default language
+title: Change homepage's default language
 
 ----
 
-version: 1.0.0
+version: 1.0.1
 
 ----
 
