@@ -2,7 +2,7 @@ title: Inline critical above the fold css
 
 ----
 
-version: 1.0.0
+version: 1.1.1
 
 ----
 
@@ -182,7 +182,7 @@ Finally type ``grunt`` and Press ``<Enter>`` (it feels right to press a little h
 
 
 ## Further optimization and optimizing
-At this point you have to manually edit the "$cssupdate" string everytime you're updating your css. This could also be automated using a grunt plugin like [grunt-cache-bust](https://github.com/hollandben/grunt-cache-bust) in combination with the .htaccess rules that are explained in the [original post](https://adactio.com/journal/8504).
+At this point you have to manually edit the ``$cssupdate`` string everytime you're updating your css. This could also be automated using a grunt plugin like [grunt-cache-bust](https://github.com/hollandben/grunt-cache-bust) in combination with the .htaccess rules that are explained in the [original post](https://adactio.com/journal/8504).
 
 ----
 
