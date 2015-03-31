@@ -51,15 +51,15 @@ We use the following (simplified) directory structure for all of our projects:
 |   +-- [...]  
 +-- Gruntfile.js  
 ```
-Our directory setup is as follows: The main (processwire) application is located under "/htdocs". On the same Level is a directory called "/src" which contains all scss, uncompressed images, bower components, composer packages, js modules and so on. The reason is quite simple: We want to avoid deploying too much useless stuff (js modules, scss files, readmes from vendor scripts...) to production servers as well as keeping the "core" application as slick as possible. Of course you can also ditch all of this stuff and just use your "good ol' handwritten css" if you're not that much into using that fancy preprocessors and package managers.
+Our directory setup is as follows: The main (processwire) application is located under "/htdocs". On the same level there is a directory called "/src" which contains all scss, uncompressed images, bower components, composer packages, js modules and so on. The reason is quite simple: We want to avoid deploying too much useless stuff (js modules, scss files, readmes from vendor scripts...) to production servers as well as keeping the "core" application as slick as possible. Of course you can also ditch all of this and just use your "good ol' handwritten css, arrrrr!" if you're not that much into using that fancy preprocessors and package managers.
 
 ## Installing the Toolchain 
 
 [Skip to the interesting part if you're already familiar with how to install and use NodeJS and GruntJS](#setup) 
 
-If you don't have NodeJS and GruntJS installed, it's about time you install them now. Here are two tutorials that help you getting started: [Mac](http://gruntjs.com/installing-grunt) | [Windows](http://www.codebelt.com/javascript/install-grunt-js-on-windows/).
+If you don't have NodeJS and GruntJS already installed, it's about time you install them now. Here are two tutorials that help you getting started: [Mac](http://gruntjs.com/installing-grunt) | [Windows](http://www.codebelt.com/javascript/install-grunt-js-on-windows/).
 
-If you're done installing open up a command prompt, ``cd`` to your projects folder. Use the following command to install the required grunt modules:  
+If you've finished installing open up a command prompt, ``cd`` to your projects folder. Use the following command to install the required grunt modules:  
 
 ```Bash
 npm install grunt-criticalcss --save-dev
@@ -67,14 +67,14 @@ npm install grunt-criticalcss --save-dev
 
 Don't be afraid: There will be quite a bunch of stuff downloading and producing output. Just let the package manager do it's work and go get yourself a coffee (or a beer if you prefer) in the mean time.  
 
-*Troubleshooting tip: If there is a message that says "missing package.json" just do a ``npm init`` and follow the on screen instructions. Retry the ``npm install[...]`` part afterwards.*  
+*Troubleshooting tip: If there is a message that says "missing package.json" just do a ``npm init`` and follow the on screen instructions. Retry the ``npm install [...]`` part afterwards.*  
 
 If everything went well you should be back in your console at some point. Now it's time for:
 
 <a name="setup"></a>
 ## Setting up the Grunt file
 
-Copy and paste the following Code to the ``Gruntfile.js`` inside your projects directory. Don't forget to adjust the path settings to your needs as well as changing the url to the one of your project. If your website is smaller or bigger than 1200px you can of course adjust those settings, too.
+Copy and paste the following Code to the ``Gruntfile.js`` inside your projects directory (at the root level). Don't forget to adjust the path settings to your needs as well as changing the url to the one of your project. If your website is smaller or bigger than 1200px you can of course adjust those settings, too.
 
 ```Javascript
 module.exports = function (grunt) {
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
 This configuration assumes there is a ``main.css`` located in ``src/assets/styles/`` and your website runs under ``http://localhost/mycoolproject/htdocs/``. The URL is crucial as there will be some "headless browser magic" done if you start the critical-css task. To explain this further here is what happens if you start the Grunt task with the command you'll find later on:  
 - A webkit based browser that runs without a graphical user interface ([PhantomJS](http://phantomjs.org/)) is started
 - The browser renders the given url and checks which styles are displayed within the configuration dimensions rectangle (1200x900px in this case)  
-- A list of applied styling rules is beeing generated
+- A list of styling rules to be applied is beeing generated
 - The rules are extracted from your ``main.css`` and inserted into a (newly created) ``critical.css`` 
 - Both files are copied into your ``htdocs/site/templates/assets/styles`` folder (you can also remove this when you don't need it and do all of this stuff within your "normal" assets folder).
 
