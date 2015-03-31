@@ -175,6 +175,11 @@ Also there is a fallback (just load the main.css instantly) for the users that b
 Last but not least we're loading the main.css file asynchronously using
 [loadCSS](http://martinwolf.org/2014/12/18/load-css-asynchronously-with-loadcss/) and set a cookie named "csscached" with the date string we previously defined in ``$cssupdate`` and a far future expires date to make it last in the cache for a long time.
 
+## Ready, set, ...
+Finally type ``grunt`` and Press ``<Enter>`` (it feels right to press a little harder than normal) in your command line, lean back and watch the magic happen.  
+
+![Go](http://i.imgur.com/fBiNqXW.gif)
+
 
 ## Further optimization and optimizing
 At this point you have to manually edit the "$cssupdate" string everytime you're updating your css. This could also be automated using a grunt plugin like [grunt-cache-bust](https://github.com/hollandben/grunt-cache-bust) in combination with the .htaccess rules that are explained in the [original post](https://adactio.com/journal/8504).
