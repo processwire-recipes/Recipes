@@ -20,12 +20,12 @@ For some reason, you have managed to lock yourself out of a site you are current
 ----
 
 solution:
-```PHP
-// concise one liner
-$users->get("admin")->of(false)->set('pass', 'yo12345')->save();
+Paste the following into a file (e.g. "reset.php") in the root folder of the site, then run it.
 
-// more verbose version
-$admin = $users->get("admin");
+```PHP
+require "index.php";
+
+$admin = wire('users')->get("admin");
 $admin->setOutputFormatting(false);
 $admin->set('pass', 'yo12345');
 $admin->save();
