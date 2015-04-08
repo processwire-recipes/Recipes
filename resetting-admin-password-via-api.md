@@ -2,11 +2,11 @@ title: Resetting admin password via API
 
 ----
 
-version: 1.0.2
+version: 1.0.3
 
 ----
 
-authors: Nico Knoll, owzim
+authors: Nico Knoll, owzim, LostKobrakai
 
 ----
 
@@ -22,13 +22,13 @@ For some reason, you have managed to lock yourself out of a site you are current
 solution:
 ```PHP
 // concise one liner
-$users->get("admin")->of(false)->set('pass', 'yo12345')->save();
+$users->get("admin")->of(false)->set('pass', 'yo12345')->save('pass');
 
 // more verbose version
 $admin = $users->get("admin");
 $admin->setOutputFormatting(false);
 $admin->set('pass', 'yo12345');
-$admin->save();
+$admin->save('pass');
 ```
 
 ----
