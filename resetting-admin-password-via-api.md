@@ -2,7 +2,7 @@ title: Resetting admin password via API
 
 ----
 
-version: 1.0.3
+version: 1.0.4
 
 ----
 
@@ -28,7 +28,7 @@ require "index.php";
 $admin = wire('users')->get('admin');
 $admin->setOutputFormatting(false);
 $admin->set('pass', 'yo12345');
-$admin->save(pass);
+$admin->save('pass');
 ```
 
 ----
