@@ -2,11 +2,11 @@ title: Quick ProcessWire first child redirect snippet
 
 ----
 
-version: 1.0.3
+version: 1.0.4
 
 ----
 
-authors: marcus
+authors: marcus, dsdsdsds
 
 ----
 
@@ -29,7 +29,8 @@ Use ProcessWire API to redirect:
  *
  */
 
-if($page->numChildren) $session->redirect($page->child()->url);
+// if current page has children (published, not hidden), redirect (HTTP 302) to its first child
+if($pages->count("parent=$page")) $session->redirect($page->child->url, false);
 ```
 
 ----
