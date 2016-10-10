@@ -27,8 +27,8 @@ ProcessWire version >= 2.6.9
 ```PHP
 
 require "index.php";
-$u = $users->get('admin'); // or whatever your username is
-$u->setAndSave('pass', 'yo123456');
+$admin = $users->get('admin'); // or whatever your username is
+$admin->setAndSave('pass', 'yo123456');
 ```
 
 ProcessWire version < 2.6.9
