@@ -2,11 +2,11 @@ title: Get random page via API, e.g. from a pool of testimonials
 
 ----
 
-version: 1.1.1
+version: 1.2.0
 
 ----
 
-authors: dragan, apeisa
+authors: dragan, apeisa, marcus
 
 ----
 
@@ -29,10 +29,10 @@ if($quote->id) {
 	$q = $quote->quote; // example field
 	$a = $quote->author; // example field
 
-	echo "<div class='quoteWrapper'>\n";
-	echo "	<div class='quote'>$q</div>\n";
-	echo "	<div class='author'>— $a</div>\n";
-	echo "</div>\n";
+	echo "<blockquote>\n";
+	echo "	<p>$q</p>\n";
+	echo "	<footer>— <cite>$a</cite></footer>\n";
+	echo "</blockquote>\n";
 
 }
 ```
