@@ -1,4 +1,4 @@
-title: set up a really simple search index using FieldtypeCache
+title: Set up a really simple search index using FieldtypeCache
 
 ----
 
