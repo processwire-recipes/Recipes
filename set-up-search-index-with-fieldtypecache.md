@@ -2,7 +2,7 @@ title: Set up a really simple search index using FieldtypeCache
 
 ----
 
-version: 1.0.0
+version: 1.0.1
 
 ----
 
@@ -32,7 +32,7 @@ We're going to use the native Fieldtype Cache to build a rudimentary search inde
 
 With the cache field now in place, all you need to do is use it in your search page, just like you would use any other field:
 ```PHP
-$q = $sanitizer->text($input->get->q);
+$q = $sanitizer->selectorValue($input->get->q);
 if ($q) {
     $pages->find('search_cache%=' . $q);
     // ... do something with the results ...
