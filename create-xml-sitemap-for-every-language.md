@@ -56,6 +56,7 @@ function renderSitemapChildren(Page $page) {
 }
 
 function renderSitemapXML(array $paths = array()) {
+	$out = '';
 	array_unshift($paths, '/'); // prepend homepage
 	foreach($paths as $path) {
 		$page = wire('pages')->get($path);
