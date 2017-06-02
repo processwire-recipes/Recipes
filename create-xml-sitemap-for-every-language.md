@@ -2,7 +2,7 @@ title: Create an XML sitemap for every language
 
 ----
 
-version: 1.0.1
+version: 1.0.2
 
 ----
 
