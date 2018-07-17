@@ -1,3 +1,25 @@
+title: Prefill PageTable fields with children on edit.md
+
+----
+
+version: 1.0.1
+
+----
+
+authors: noelboss
+
+----
+
+tags: pages, fields
+
+----
+
+problem:
+Editing children is not very intuitive right away. The goal is to provide easy ordering and editing of children without loosing the page contect. Using a PageTable field to make this more intuitive, but children are not added automatically to this field.
+
+----
+
+Solution
 I use a PageTable field to make edits to children of pages more intuitive…
 
 To register the hooks, insert the following Snippet inside your init function in your module (or add it to your init.php file):
@@ -42,10 +64,15 @@ Then, add this hook method:
         $page->of(false);
 
         // you could also insert a check to only do this with sepcific field names…
-        // $page->get($field->name)->add($page->children('template=DesiredTemplate')); // just specific templates
-        $page->get($field->name)->add($page->children);
+        // $page->set($field->name, $page->children('template=DesiredTemplate')); // just specific templates
+        $page->set($field->name, $page->children);
+
       }
 
 Now whenever there is a page-table field on your page, it gets populated with the children.
 
+
+---
+resources:
 [See Forum-Post](https://processwire.com/talk/topic/19634-a-hook-to-prefill-pagetable-fields-with-children-on-edit/?do=edit)
+
