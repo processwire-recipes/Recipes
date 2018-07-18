@@ -1,8 +1,8 @@
-title: Prefill PageTable fields with children on edit.md
+title: Prefill PageTable fields with children on edit
 
 ----
 
-version: 1.0.1
+version: 1.0.2
 
 ----
 
@@ -24,6 +24,8 @@ I use a PageTable field to make edits to children of pages more intuitive…
 
 To register the hooks, insert the following Snippet inside your init function in your module (or add it to your init.php file):
 
+```PHP
+
     /**
      * Initialize the module.
      *
@@ -36,8 +38,11 @@ To register the hooks, insert the following Snippet inside your init function�
       $this->wire()->addHookBefore('InputfieldPageTable::render', $this, 'addChildrenToPageTableFieldsHook');
       $this->wire()->addHookBefore('InputfieldPageTableAjax::checkAjax', $this, 'addChildrenToPageTableFieldsHook');
     }
+```
 
 Then, add this hook method:
+
+```PHP
 
       /**
        * Fill pagetable fields with children before editing….
@@ -68,9 +73,9 @@ Then, add this hook method:
         $page->set($field->name, $page->children);
 
       }
+```
 
 Now whenever there is a page-table field on your page, it gets populated with the children.
-
 
 ---
 resources:
