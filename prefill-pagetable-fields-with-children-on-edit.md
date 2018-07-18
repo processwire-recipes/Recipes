@@ -74,5 +74,5 @@ Now whenever there is a page-table field on your page, it gets populated with th
 
 ---
 resources:
-[See Forum-Post](https://processwire.com/talk/topic/19634-a-hook-to-prefill-pagetable-fields-with-children-on-edit/?do=edit)
+[See Forum-Post](https://processwire.com/talk/topic/19634-a-hook-to-prefill-pagetable-fields-with-children-on-edit/)
 
