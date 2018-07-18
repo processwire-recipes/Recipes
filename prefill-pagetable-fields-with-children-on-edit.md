@@ -19,7 +19,7 @@ Editing children is not very intuitive right away. The goal is to provide easy o
 
 ----
 
-Solution
+solution:
 I use a PageTable field to make edits to children of pages more intuitive…
 
 To register the hooks, insert the following Snippet inside your init function in your module (or add it to your init.php file):
