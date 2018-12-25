@@ -36,6 +36,19 @@ echo "<li>{$page->title}</li>\n";
 echo "</ul>";
 ```
 
+
+Alternative:
+```PHP
+echo "<ul class=\"breadcrumbs \">";
+
+echo $page->parents->each("<li><a href='{url}'>{title}</a></li>\n");
+
+// show current / "we are here" page as well, but not as link: (last element)
+echo "<li>{$page->title}</li>\n";
+
+echo "</ul>";
+```
+
 ----
 
 resources:
