@@ -1,28 +1,23 @@
-title: Cache the result of a function
-
-----
-
+---
+title: "Cache the result of a function"
 version: 1.0.0
+authors:
+  - owzim
+tags:
+  - cache
+  - performance
+date: 2016-11-16
+---
 
-----
-
-authors: owzim
-
-----
-
-tags: cache, performance
-
-----
-
-problem:
+## Problem
 
 In your modules (or somewhere else) sometimes you have expensive calculations to make, or you simply want to cache a result of a method/function, when its parameters/data do not change on runtime and it’s still accessed multiple times.
 
-**Note:** This a *runtime cache*, nothing is saved to disk or the database.
+**Note:** This a _runtime cache_, nothing is saved to disk or the database.
 
-----
+---
 
-solution:
+## Solution
 
 ```php
 function expensiveStuff($name, $someOtherParam, $forceNew = false)
@@ -45,6 +40,6 @@ function expensiveStuff($name, $someOtherParam, $forceNew = false)
 }
 ```
 
-----
+---
 
-resources:
+### Resources

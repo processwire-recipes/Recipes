@@ -1,26 +1,25 @@
-title: Create an XML sitemap for every language
-
-----
-
+---
+title: "Create an XML sitemap for every language"
 version: 1.0.2
+authors:
+  - dragan
+tags:
+  - pages
+  - multilanguage
+  - xml-sitemap
+  - seo
+date: 2017-06-02
+---
 
-----
+## Problem
 
-authors: dragan
-
-----
-
-tags: pages, multilanguage, xml-sitemap, seo
-
-----
-
-problem:
 With PW multilanguage setup, you'd have normally to manually "glue" multilanguage sitemaps XMLs together.
 
-----
+---
 
-solution:
-```PHP
+## Solution
+
+```php
 /*
 Google et al usually only accepts one single XML, not one for each language
 With PW multilang. setup, you'd have normally to manually "glue" these XMLs together
@@ -31,7 +30,7 @@ http://processwire.com/talk/topic/3846-how-do-i-create-a-sitemapxml/?p=37613
 // opening XML tag + node:
 $sitemapCollection = '<?xml version="1.0" encoding="UTF-8"?>' . "\n" .
 		'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-		
+
 function renderSitemapPage(Page $page) {
 	return 	"\n<url>" .
 		"\n\t<loc>" . $page->httpUrl . "</loc>" .
@@ -99,7 +98,8 @@ echo $sitemapCollection;
 
 ```
 
-----
+---
 
-resources:
-* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/xmlSitemapMultilang.php)
+### Resources
+
+- [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/xmlSitemapMultilang.php)

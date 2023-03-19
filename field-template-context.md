@@ -1,27 +1,24 @@
-title: Field/template context
-
-----
-
+---
+title: "Field/template context"
 version: 1.0.0
+authors:
+  - owzim
+  - kongondo
+tags:
+  - api
+  - templates
+  - fields
+  - context
+date: 2015-01-17
+---
 
-----
+## Problem
 
-authors: owzim, kongondo
+Fields can have template-contextual settings and as of ProcessWire [2.5.7](http://processwire.com/blog/posts/processwire-2.5.7-core-updates/) you can set _all_ field settings in a template context. Using the [API](https://processwire.com/api/) it works a bit differently than the usual `$f->set('setting', $value); $f->save();`.
 
-----
+## Solution
 
-tags: api, templates, fields, context
-
-----
-
-problem:
-Fields can have template-contextual settings and as of ProcessWire [2.5.7](http://processwire.com/blog/posts/processwire-2.5.7-core-updates/) you can set *all* field settings in a template context. Using the [API](https://processwire.com/api/) it works a bit differently than the usual `$f->set('setting', $value); $f->save();`.
-
-----
-
-solution:
-
-```PHP
+```php
 // get the template
 $t = $templates->get('basic-page');
 
@@ -35,8 +32,9 @@ $f->description = "Description of 'summary' only in context of 'basic-page'";
 $fields->saveFieldgroupContext($f, $t->fieldgroup);
 ```
 
-----
+---
 
-resources:
-* Forum thread: [Change field description in context via API](https://processwire.com/talk/topic/6656-change-field-description-in-context-via-api/?p=65139)
-* Blog post: [Field/template context now available for any field property](http://processwire.com/blog/posts/processwire-2.5.7-core-updates/#field-template-context-now-available-for-any-field-property)
+### Resources
+
+- Forum thread: [Change field description in context via API](https://processwire.com/talk/topic/6656-change-field-description-in-context-via-api/?p=65139)
+- Blog post: [Field/template context now available for any field property](http://processwire.com/blog/posts/processwire-2.5.7-core-updates/#field-template-context-now-available-for-any-field-property)

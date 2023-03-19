@@ -1,27 +1,21 @@
-title: Create page via API
-
-----
-
+---
+title: "Create page via API"
 version: 1.0.1
+authors:
+  - dragan
+tags:
+  - page
+  - creation
+date: 2015-01-17
+---
 
-----
+## Problem
 
-authors: dragan
-
-----
-
-tags: page, creation
-
-----
-
-problem:
 You want to create one or more pages, bypassing the admin interface
 
-----
+## Solution
 
-solution:
-
-```PHP
+```php
 $p = new Page();
 $p->setOutputFormatting(false);
 $p->template = 'products'; // example template
@@ -33,7 +27,8 @@ $p->save();
 echo "page ID {$p->id} created!<br>";
 ```
 
-----
+---
 
-resources:
-* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/createPage.php)
+### Resources
+
+- [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/createPage.php)

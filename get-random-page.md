@@ -1,27 +1,26 @@
-title: Get random page via API, e.g. from a pool of testimonials
-
-----
-
+---
+title: "Get random page via API, e.g. from a pool of testimonials"
 version: 1.2.0
+authors:
+  - apeisa
+  - dragan
+  - marcus
+tags:
+  - pages
+  - random
+  - shuffle
+date: 2016-10-30
+---
 
-----
+## Problem
 
-authors: dragan, apeisa, marcus
-
-----
-
-tags: pages, random, shuffle
-
-----
-
-problem:
 You have a pool of pages, e.g. quotes/testimonials, and want to display a random one.
 
-----
+## Solution
 
-solution:
 A little example how to pull a random page:
-```PHP
+
+```php
 $quote = $pages->find("template=quote, include=hidden, sort=random, limit=1")->first();
 
 if($quote->id) {
@@ -37,7 +36,8 @@ if($quote->id) {
 }
 ```
 
-----
+---
 
-resources:
-* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/randomQuote.inc)
+### Resources
+
+- [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/randomQuote.inc)

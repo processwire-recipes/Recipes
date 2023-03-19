@@ -1,30 +1,27 @@
-title: Prefill PageTable fields with children on edit
-
-----
-
+---
+title: "Prefill PageTable fields with children on edit"
 version: 1.0.3
+authors:
+  - noelboss
+tags:
+  - pages
+  - fields
+  - hook
+  - init
+date: 2018-17-18
+---
 
-----
+## Problem
 
-authors: noelboss
-
-----
-
-tags: pages, fields
-
-----
-
-problem:
 Editing children is not very intuitive right away. The goal is to provide easy ordering and editing of children without loosing the page contect. Using a PageTable field to make this more intuitive, but children are not added automatically to this field.
 
-----
+## Solution
 
-solution:
 I use a PageTable field to make edits to children of pages more intuitive…
 
 To register the hooks, insert the following Snippet inside your init function in your module (or add it to your init.php file):
 
-```PHP
+```php
 /**
  * Initialize the module.
  *
@@ -41,7 +38,7 @@ public function init()
 
 Then, add this hook method:
 
-```PHP
+```php
 /**
 * Fill pagetable fields with children before editing….
 *
@@ -75,8 +72,8 @@ $page->set($field->name, $page->children);
 
 Now whenever there is a page-table field on your page, it gets populated with the children.
 
-----
+---
 
-resources:
-* [See Forum-Post](https://processwire.com/talk/topic/19634-a-hook-to-prefill-pagetable-fields-with-children-on-edit/)
+### Resources
 
+- [See Forum-Post](https://processwire.com/talk/topic/19634-a-hook-to-prefill-pagetable-fields-with-children-on-edit/)

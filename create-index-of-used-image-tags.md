@@ -1,27 +1,24 @@
-title: Create an index / linklist of all used image tags
-
-----
-
+---
+title: "Create an index / linklist of all used image tags"
 version: 1.0.0
+authors:
+  - soma
+  - teppo
+tags:
+  - images
+  - index
+date: 2016-10-30
+---
 
-----
+## Problem
 
-authors: soma, teppo
-
-----
-
-tags: images, index
-
-----
-
-problem:
 You need to collect all tags from image fields and create a link list to then filter pages with images that have the selected tag.
 
-----
+## Solution
 
-solution:
 The solution in it's entirety can be seen below. Code comments describe exactly what is happening, and for the most part this should be pretty easy to grasp with some basic understanding of PHP and the ProcessWire API.
-```PHP
+
+```php
 /**
  * collect all tags
  * ======================================
@@ -104,8 +101,9 @@ if($input->urlSegment1 || $input->get->tag){
 }
 ```
 
-----
+---
 
-resources:
-* [ProcessWire Weekly 124](https://weekly.pw/issue/124/)
-* [Soma'original recipe](https://gist.github.com/somatonic/5808897)
+### Resources
+
+- [ProcessWire Weekly 124](https://weekly.pw/issue/124/)
+- [Soma'original recipe](https://gist.github.com/somatonic/5808897)

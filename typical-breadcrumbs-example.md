@@ -1,26 +1,23 @@
-title: Typical breadcrumbs example
-
-----
-
+---
+title: "Typical breadcrumbs example"
 version: 1.0.1
+authors:
+  - dragan
+tags:
+  - breadcrumbs
+  - pages
+  - parent
+  - templates
+date: 2018-12-24
+---
 
-----
+## Problem
 
-authors: dragan
-
-----
-
-tags: template, pages, parent, breadcrumbs
-
-----
-
-problem:
 You want to create a typical breadcrumb list, with last item not linked and showing the current page
 
-----
+## Solution
 
-solution:
-```PHP
+```php
 echo "<ul class=\"breadcrumbs \">";
 
 $parents = $page->parents;
@@ -36,9 +33,9 @@ echo "<li>{$page->title}</li>\n";
 echo "</ul>";
 ```
 
-
 Alternative:
-```PHP
+
+```php
 echo "<ul class=\"breadcrumbs \">";
 
 echo $page->parents->each("<li><a href='{url}'>{title}</a></li>\n");
@@ -49,7 +46,8 @@ echo "<li>{$page->title}</li>\n";
 echo "</ul>";
 ```
 
-----
+---
 
-resources:
-* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/breadcrumbs.inc)
+### Resources
+
+- [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/breadcrumbs.inc)

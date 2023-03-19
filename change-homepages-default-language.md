@@ -1,33 +1,30 @@
-title: Change homepage's default language
-
-----
-
+---
+title: "Change homepage's default language"
 version: 1.0.1
+authors:
+  - bcartier
+  - ESRCH
+tags:
+  - multilanguage
+  - homepage
+  - modules
+  - hook
+date: 2015-03-31
+---
 
-----
+## Problem
 
-authors: bcartier, ESRCH
+You have a multi-language site, and started with for example English as primary, and French as secondary language (so the English homepage is `example.org/`, the French one `example.org/fr`). Later in the project you want to set French as primary.
 
-----
-
-tags: multilanguage, homepage, modules
-
-----
-
-problem:
-You have a multi-language site, and started with for example English as primary, and French as secondary language (so the English homepage is example.org/, the French one example.org/fr).
-Later in the project you want to set French as primary.
-
-----
-
-solution:
+## Solution
 
 Here is what you can do to redirect the home page '/' to the French home page:
-* Set page names for both languages for the home page ('en' for English, 'fr' for French)
-* In the LanguageSupportPageNames settings, choose the option "No - Root URL performs a redirect to: /name/". When you go to the root url '/' it will redirect you to '/en/'
-* Finally, **create a module** to hook into Session::redirect to force the redirection of the root url to the French translation as follows:
 
-```PHP
+- Set page names for both languages for the home page ('en' for English, 'fr' for French)
+- In the LanguageSupportPageNames settings, choose the option "No - Root URL performs a redirect to: /name/". When you go to the root url '/' it will redirect you to '/en/'
+- Finally, **create a module** to hook into Session::redirect to force the redirection of the root url to the French translation as follows:
+
+```php
 <?php
 
 	class LanguageDefault extends WireData implements Module {
@@ -72,9 +69,8 @@ Here is what you can do to redirect the home page '/' to the French home page:
 	}
 ```
 
+---
 
-----
+### Resources
 
-resources:
-
-* [bcartiers's forum post](https://processwire.com/talk/topic/9322-change-default-language-for-homepage/#entry89925)
+- [bcartiers's forum post](https://processwire.com/talk/topic/9322-change-default-language-for-homepage/#entry89925)

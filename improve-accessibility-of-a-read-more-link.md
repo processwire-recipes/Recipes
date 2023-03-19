@@ -1,32 +1,31 @@
-title: Improve accessibility of a read more link
+---
+title: "Improve accessibility of a read more link version: 1.0.0"
+authors:
+  - marcus
+tags:
+  - a11y
+  - accessibility
+  - templates
+date: 2016-02-14
+---
 
-----
+## Problem
 
-version: 1.0.0
-
-----
-
-authors: marcus
-
-----
-
-tags: a11y, accessibility, templates
-
-----
-
-problem:
 You want to enhance (screenreader) accessibility on a "read more" link in a teaser scenario like this:
 
+**Image no longer exists**
+
+```md
 ![Teaser Scenario](https://bigger-on-the-inside.net/site/assets/files/1037/news-demo-v1.png)
+```
 
 [W3C's Accessibility Guidelines on links and content](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
-----
+## Solution
 
-solution:
 Add a visually hidden, but audible element like this:
 
-```PHP
+```php
 <?php
 $news = $pages->find('template=news');
 
@@ -48,22 +47,22 @@ foreach($news as $teaser): ?>
 
 Also add to your CSS:
 
-```CSS
-.visually-hidden { 
-    position: absolute; 
-    width: 1px; 
-    height: 1px; 
-    padding: 0; 
-    margin: -1px; 
-    overflow: hidden; 
-    clip-path: rect(0, 0, 0, 0); 
-    border: 0; 
+```css
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  border: 0;
 }
-
 ```
 
-----
+---
 
-resources:
-* [Blog post on this topic](https://bigger-on-the-inside.net/articles/better-accessibility-with-processwire-read-more-links/)
-* [W3C's Accessibility Guidelines on links and content](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
+### Resources
+
+- [Blog post on this topic](https://bigger-on-the-inside.net/articles/better-accessibility-with-processwire-read-more-links/)
+- [W3C's Accessibility Guidelines on links and content](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)

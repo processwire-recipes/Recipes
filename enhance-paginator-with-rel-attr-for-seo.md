@@ -1,31 +1,30 @@
-title: Enhance paginator with rel attribute for SEO
-
-----
-
+---
+title: "Enhance paginator with rel attribute for SEO"
 version: 1.0.0
+authors:
+  - teppo
+  - Philipp
+  - ceberlin
+tags:
+  - seo
+  - pagination
+date: 2015-03-31
+---
 
-----
+## Problem
 
-authors: teppo, Philipp, ceberlin
-
-----
-
-tags: seo, pagination
-
-----
-
-problem:
 Search engines want special code in the header to identify pages with a paginator correctly and there is no obvious way of implementing this with the ProcessWire paginator.
 
-```HTML
+```html
 <a rel="prev" href="http://www.example.com/article?page=1" />...</a>
 <a rel="next" href="http://www.example.com/article?page=3" />...</a>
 ```
-----
 
-solution:
+---
 
-```PHP
+## Solution
+
+```php
 $limit = 12; // the "limit"-setting used on this page
 $children = $page->children("limit=" . $limit);
 $totalpages = ceil($children->getTotal() / $limit);
@@ -49,8 +48,8 @@ foreach($children as $child): ?>
 <?php echo $children->renderPager(); ?>
 ```
 
-----
+---
 
-resources:
+### Resources
 
-* [Forum thread](https://processwire.com/talk/topic/5145-paginator-and-seo/)
+- [Forum thread](https://processwire.com/talk/topic/5145-paginator-and-seo/)

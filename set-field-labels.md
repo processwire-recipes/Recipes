@@ -1,27 +1,24 @@
-title: Set language-specific input field labels via API
-
-----
-
+---
+title: "Set language-specific input field labels via API"
 version: 1.0.1
+authors:
+  - dragan
+tags:
+  - pages
+  - multilanguage
+  - labels
+date: 2015-01-17
+---
 
-----
+## Problem
 
-authors: dragan
-
-----
-
-tags: pages, multilanguage, labels
-
-----
-
-problem:
 You have a multi-language setup and want to set language-specific labels, bypassing admin interface
 
-----
+## Solution
 
-solution:
 If you want to activate all languages, use this after your page-creation API script. In this real-life scenario I had to import product pages, hence the template-selector below.
-```PHP
+
+```php
 // Assign API variables to make things a little easier
 $fields = wire("fields");
 $languages = wire("languages");
@@ -40,8 +37,9 @@ $field->set("label$fr", "Max. consommation de courant");
 $field->save();
 ```
 
-----
+---
 
-resources:
-* [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/setFieldLabels.php)
-* [ProcessWire API documentation and getting and setting](http://processwire.com/api/multi-language-support/multi-language-fields/#getting-and-setting)
+### Resources
+
+- [Dragan's ProcessWire code snippets](https://github.com/dragan1700/pw/blob/master/setFieldLabels.php)
+- [ProcessWire API documentation and getting and setting](http://processwire.com/api/multi-language-support/multi-language-fields/#getting-and-setting)
