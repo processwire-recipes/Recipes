@@ -6,7 +6,8 @@ authors:
 tags:
   - pages
   - multilanguage
-  - xml-sitemap
+  - sitemap
+  - xml
   - seo
 date: 2017-06-02
 ---
