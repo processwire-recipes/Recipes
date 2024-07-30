@@ -1,10 +1,10 @@
 ---
-title: "Converting thumbnail images for PW3 admin"
+title: "Converting thumbnail images for ProcessWire 3.x admin"
 version: 1.0.1
 authors:
   - ryan
 tags:
-  - processwire3
+  - processwire
   - admin
   - thumbnails
 date: 2016-11-02

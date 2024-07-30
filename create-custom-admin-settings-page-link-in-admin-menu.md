@@ -4,7 +4,7 @@ version: 1.0.0
 authors:
   - jlahijani
 tags:
-  - page
+  - pages
   - settings
   - admin
 date: 2015-08-30

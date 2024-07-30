@@ -4,7 +4,7 @@ version: 1.0.1
 authors:
   - dragan
 tags:
-  - page
+  - pages
   - creation
 date: 2015-01-17
 ---

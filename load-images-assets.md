@@ -4,8 +4,8 @@ version: 1.0.0
 authors:
   - ryan
 tags:
-  - ProcessWire
-  - DEV
+  - processwire
+  - dev
 date: 2023-05-18
 ---
 

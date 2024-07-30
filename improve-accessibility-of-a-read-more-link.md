@@ -3,8 +3,7 @@ title: "Improve accessibility of a read more link version: 1.0.0"
 authors:
   - marcus
 tags:
-  - a11y
-  - accessibility
+  - accessibility (a11y)
   - templates
 date: 2016-02-14
 ---
