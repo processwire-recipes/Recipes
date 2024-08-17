@@ -6,7 +6,9 @@ authors:
 tags:
   - fields
   - API
-date: 2023-04-19
+date: 2024-08-17
+created: 2023-04-19
+updated: 2024-08-17
 ---
 
 ## Problem
@@ -19,14 +21,18 @@ Don't worry and get all unused fields via API. The Field class has a method `get
 
 ```php
 $danglingFields = new WireArray();
-foreach($fields as $f) if($f->getTemplates()->count === 0) $danglingFields->add($fields->get($f));
-// now $danglingFields is a WireArray of Field objects. Do with it as you please.
+// Iterate through all fields in the system
+foreach ($fields as $f) {
+    // Check if the field is not used by any template
+    if ($f->getTemplates()->count === 0) {
+        // If the field is unused, add it to the $danglingFields WireArray
+        $danglingFields->add($fields->get($f));
+    }
+}
+// now $danglingFields is a WireArray of Field objects.
+// Do with it as you please.
 // You could delete all unused fields:
 // foreach($danglingFields as $f) $fields->delete($f);
-// But caution. They will be gone for good. You better make a DB backup before doing this.
+// But caution. They will be gone for good.
+//You better make a DB backup before doing this.
 ```
----
-
-### Resources
-
-
