@@ -28,7 +28,7 @@ For your new project you duplicate a old installation so you don't have to start
 
 ## Solution
 
-Create a new document, copy&paste the code below, save it to the root of your PW installation and open it in a browser. Initially it perfoms a dry run, so your are save before actual deletion take place.
+Create a new document, copy&paste the code below, save it to the root of your PW installation and open it in a browser. Initially it performs a dry run, so your are save before actual deletion take place.
 
 Because we are dealing with actual files, make a backup of you `files` folder and double check the output results before changing the mode.
 
