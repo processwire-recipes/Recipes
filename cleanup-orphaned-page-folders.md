@@ -42,8 +42,10 @@ Because we are dealing with actual files, make a backup of you `files` folder an
  * - Implements a dry run mode
  * - Tested with ProcessWire 3.0.x, PHP 8.4.x
  * 
+ * Usage:
+ * 
  * Place the script file in the root of your PW installation (or
- * adapt the pw bootstrap path), than open the file within the browser.
+ * adapt the pw bootstrap path), than open the file in the browser.
  * 
  * @author Olaf Gleba
  * @version 1.0.0
