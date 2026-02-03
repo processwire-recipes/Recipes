@@ -121,7 +121,7 @@ foreach ($dirs as $dir) {
         }
     }
 
-    // Delete folder (if args `--delete` is present, s.above)
+    // Delete folder (if mode is set to `false`, s.above)
     if (!$dryRun) {
         deleteDirectory($pageDir);
         echo "  FOLDER DELETED<br />";
